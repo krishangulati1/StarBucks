@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks WebSite Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+        <header>
+            <a href="#"><img src="./resource/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </a>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>
+                    Its not just coffee <br>Its <span>
+                        StarBucks
+                    </span>
+                </h2>
+                <p>
+                    It’s just a moment in time – just one hand reaching over the counter to present a cup to another outstretched hand.
+                    But it’s a connection.
+                    We make sure everything we do honors that connection – from our commitment to the highest quality coffee in the world, to the way we engage with our customers and communities to do business responsibly.
+                    From our beginnings as a single store over forty years ago, in every place that we’ve been, and every place that we touch, we've tried to make it a little better than we found it.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="./resource/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./resource/thumb1.png" onclick="imgSlider('./resource/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="./resource/thumb2.png" onclick="imgSlider('./resource/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="./resource/thumb3.png" onclick="imgSlider('./resource/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="./resource/facebook.png" ></a></li>
+            <li><a href="#"><img src="./resource/twitter.png" ></a></li>
+            <li><a href="#"><img src="./resource/instagram.png" ></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color
+        }
+    </script>
+</body>
+</html>
